@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_19_144600) do
+ActiveRecord::Schema.define(version: 2020_11_22_140743) do
+
+  create_table "todos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "content"
+    t.string "name"
+    t.date "duedate"
+    t.decimal "status", precision: 10
+    t.text "remark"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_todos_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -20,4 +32,5 @@ ActiveRecord::Schema.define(version: 2020_11_19_144600) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "todos", "users"
 end
