@@ -1,5 +1,6 @@
 class TodosController < ApplicationController
   before_action :require_user_logged_in
+  before_action :guest_user, only: [:create, :edit, :destroy]
 
   def index
     @todos = Todo.all.page(params[:page]).per(30)

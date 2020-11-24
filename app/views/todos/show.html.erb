@@ -1,4 +1,4 @@
-<h1>Details Todo#id: <%= @todo.id %></h1>
+<h1>Detail Todo#id: <%= @todo.id %> </h1>
 
 <table class="table table-bordered">
   <tr>
@@ -24,9 +24,8 @@
   <tr>
     <th>Remarks</th>
     <td><%= @todo.remark %></td>
-  </tr>
+  </tr>  
 </table>
 
-<%= link_to 'Back to Todo list', todos_path %>
 <%= link_to 'Edit', edit_todo_path(@todo), class: 'btn btn-light' %>
-<%= link_to 'Delet', @todo, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+<%= link_to 'Delete', @todo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
