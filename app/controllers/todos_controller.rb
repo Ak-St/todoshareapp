@@ -2,11 +2,11 @@ class TodosController < ApplicationController
   before_action :require_user_logged_in
 
   def index
-    @todos = Todo.all
+    @todos = Todo.all.page(params[:page]).per(30)
   end
   
   def show
-    @todo = Todo.find(params[:id])
+    set_todo
   end
   
   def new
@@ -26,7 +26,7 @@ class TodosController < ApplicationController
   end
 
   def edit
-    @todo = Todo.find(params[:id])
+    set_todo
   end
 
   def update
@@ -42,7 +42,7 @@ class TodosController < ApplicationController
   end
 
   def destroy
-    @todo = Todo.find(params[:id])
+    set_todo
     @todo.destroy
     
     flash[:success] = 'Todo was deleted.'
@@ -50,6 +50,10 @@ class TodosController < ApplicationController
   end
 
   private
+  
+  def set_todo
+    @todo = Todo.find(params[:id])
+  end
 
   def todo_params
     params.require(:todo).permit(:content, :name, :duedate, :status, :remark)
