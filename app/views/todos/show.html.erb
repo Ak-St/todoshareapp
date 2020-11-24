@@ -1,7 +1,32 @@
-<h1>Detail of Todo # id: <%= @todo.id %></h1>
+<h1>Details Todo#id: <%= @todo.id %></h1>
 
-<p><%= @todo.content %></p>
+<table class="table table-bordered">
+  <tr>
+    <th>#</th>
+    <td><%= @todo.id %></td>
+  </tr>
+  <tr>
+    <th>Todo</th>
+    <td><%= @todo.content %></td>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <td><%= @todo.name %></td>
+  </tr>
+  <tr>
+    <th>Duedate</th>
+    <td><%= @todo.duedate %></td>
+  </tr>
+  <tr>
+    <th>Status(%)</th>
+    <td><%= @todo.status %></td>
+  </tr>
+  <tr>
+    <th>Remarks</th>
+    <td><%= @todo.remark %></td>
+  </tr>
+</table>
 
-<%= link_to 'Back to Todo list', todo_path %>
-<%= link_to 'Edit', edit_todo_path(@todo) %>
-<%= link_to 'Delet', @todo, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back to Todo list', todos_path %>
+<%= link_to 'Edit', edit_todo_path(@todo), class: 'btn btn-light' %>
+<%= link_to 'Delet', @todo, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger' %>

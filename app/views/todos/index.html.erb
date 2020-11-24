@@ -1,6 +1,6 @@
 <h1>ToDo List</h1>
 
-<% if @messages.any? %>
+<% if @todos.any? %>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -8,7 +8,7 @@
         <th>Todo</th>
         <th>Name</th>
         <th>Duedate</th>
-        <th>Status</th>
+        <th>Status(%)</th>
         <th>Remarks</th>
       </tr>
     </thead>
@@ -26,7 +26,7 @@
     </tbody>
   </table>
   <div>
-    <%= paginate @messages %>
+    <%= paginate @todos %>
   </div>
 <% end %>
 
