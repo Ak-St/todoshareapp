@@ -1,0 +1,7 @@
+<h1>Detail of Todo # id: <%= @todo.id %></h1>
+
+<p><%= @todo.content %></p>
+
+<%= link_to 'Back to Todo list', todo_path %>
+<%= link_to 'Edit', edit_todo_path(@todo) %>
+<%= link_to 'Delet', @todo, method: :delete, data: { confirm: 'Are you sure?' } %>

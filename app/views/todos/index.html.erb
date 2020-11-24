@@ -1,0 +1,31 @@
+<h1>ToDo List</h1>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Todo</th>
+        <th>Name</th>
+        <th>Duedate</th>
+        <th>Status</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @todos.each do |todo| %>
+        <tr>
+          <td><%= link_to todo.id, todo %></td>
+          <td><%= todo.content %></td>
+          <td><%= todo.name %></td>
+          <td><%= todo.duedate %></td>
+          <td><%= todo.status %></td>
+          <td><%= todo.remark %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+
+<%= link_to 'Add new ToDo', new_todo_path, class: "btn btn-primary" %>
