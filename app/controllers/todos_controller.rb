@@ -3,7 +3,7 @@ class TodosController < ApplicationController
   before_action :guest_user, only: [:create, :edit, :destroy]
 
   def index
-    @todos = Todo.all.page(params[:page]).per(30)
+    @todos = Todo.order('duedate').all.page(params[:page]).per(30)
   end
   
   def show
