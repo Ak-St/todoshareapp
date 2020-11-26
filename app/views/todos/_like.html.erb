@@ -6,13 +6,13 @@
 <td><%= todo.remark %></td>
 <% if current_user.liked_by?(todo.id) %>
   <td><%= link_to destroy_like_path(todo), class: "like-link", method: :delete, remote: true do%>
-        <i class="fa fa-heart unlike-btn"></i>
+        <i class="fas fa-thumbs-up unlike-btn"></i>
       <% end %>
       <%= todo.likes.count %>
   </td>
 <% else %>
   <td><%= link_to create_like_path(todo), class: "like-link", method: :post, remote: true do%>
-        <i class="fa fa-heart like-btn"></i>
+        <i class="fas fa-thumbs-up like-btn"></i>
       <% end %>
       <%= todo.likes.count %>
   </td>

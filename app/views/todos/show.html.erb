@@ -27,5 +27,6 @@
   </tr>  
 </table>
 
-<%= link_to 'Edit', edit_todo_path(@todo), class: 'btn btn-light' %>
+<%= link_to 'Back to ToDo List', root_url, class: 'btn btn-success' %>
+<%= link_to 'Edit', edit_todo_path(@todo), class: 'btn btn-primary' %>
 <%= link_to 'Delete', @todo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
