@@ -21,10 +21,10 @@
       <%= f.submit 'Log in', class: 'btn btn-primary btn-block' %>
     <% end %>
     
-    <div class="gust_login">
-      <%= link_to 'Guest Log in', guest_sessions_path, method: :post, class: 'btn btn-light btn-block' %>
-    </div>
-
     <p>New user? <%= link_to 'Sign up now!', signup_path %></p>
+    
+    <div class="gust_login">
+      <%= link_to 'Guest Log in', guest_sessions_path, method: :post, class: 'btn btn-success btn-block' %>
+    </div>
   </div>
 </div>

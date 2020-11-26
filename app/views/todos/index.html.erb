@@ -10,17 +10,13 @@
         <th>Duedate</th>
         <th>Status(%)</th>
         <th>Remarks</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <% @todos.each do |todo| %>
-        <tr>
-          <td><%= link_to todo.id, todo %></td>
-          <td><%= todo.content %></td>
-          <td><%= todo.name %></td>
-          <td><%= todo.duedate %></td>
-          <td><%= todo.status %></td>
-          <td><%= todo.remark %></td>
+        <tr id="likes_<%= todo.id %>">
+          <%= render partial: 'todos/like', locals: { todo: todo} %>
         </tr>
       <% end %>
     </tbody>

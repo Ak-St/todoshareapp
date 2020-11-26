@@ -7,4 +7,10 @@ class User < ApplicationRecord
   has_secure_password
   
   has_many :todos
+  has_many :likes
+  
+  def liked_by?(todo_id)
+    likes.where(todo_id: todo_id).exists?
+  end
+
 end
