@@ -1,7 +1,7 @@
-## Todo Share APP
-Todoの共有アプリ　（https://todoshareapp2020nov.herokuapp.com/）
+# Todo Share APP
+**Todoの共有アプリ**　（https://todoshareapp2020nov.herokuapp.com/）
 
-### 概要
+## 概要
 業務でのタスク管理をイメージして作成しました。<br>
 進捗や作業漏れ確認、分担見直しなどができるように、タスク一覧をみんなで共有・管理するツールです。<br>
 Todoリストには、備考欄に加えて、いいね機能を実装することで、<br>
@@ -22,7 +22,7 @@ Todoリストには、備考欄に加えて、いいね機能を実装するこ�
 <img src="https://user-images.githubusercontent.com/69382548/100492971-a68b1700-3175-11eb-9733-8f8e509ac22f.JPG" width = "683px" height = "315px">
 
 
-### 使用技術
+## 使用技術
 - Ruby 2.5.3
 - Rails 5.2.4.4
 - jQuery
@@ -30,16 +30,16 @@ Todoリストには、備考欄に加えて、いいね機能を実装するこ�
 - PostgreSQL
 - デプロイ：　heroku
 
-### 実装機能
-#### ユーザー関連
+## 実装機能
+### ユーザー関連
 - 登録機能
 - ログイン、ログアウト機能
 - ゲストユーザーでのログイン、ログアウト機能
 - ユーザー一覧表示
 
-#### Todo関連
+### Todo関連
 - 投稿、削除、更新機能
 - 詳細／一覧表示
 
-#### その他機能
+### その他機能
 - 同期／非同期の「いいね」機能
