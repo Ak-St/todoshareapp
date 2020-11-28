@@ -1,5 +1,5 @@
 # Todo Share APP
-**Todoの共有アプリ**　[アプリへ　>>https://todoshareapp2020nov.herokuapp.com/](https://todoshareapp2020nov.herokuapp.com/)
+**Todoの共有アプリ**　[（https://todoshareapp2020nov.herokuapp.com/）](https://todoshareapp2020nov.herokuapp.com/)
 
 ## 概要
 業務でのタスク管理をイメージして作成しました。<br>
